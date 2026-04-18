@@ -560,6 +560,20 @@
   footer p { font-size: 13px; color: var(--gray); margin: 0; }
 
   /* ANIMATIONS */
+  .income-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: 640px) {
+    .income-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -679,7 +693,7 @@
 
     <p style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:4px; color:#C9A84C; margin:40px 0 20px;">THAT 70 CENTS TURNED INTO THIS</p>
 
-    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin:0 0 16px;">
+    <div class="income-grid">
 
       <div style="border:2px solid #C9A84C; border-radius:8px; overflow:hidden; box-shadow:0 0 20px rgba(201,168,76,0.15); display:flex; flex-direction:column;">
         
